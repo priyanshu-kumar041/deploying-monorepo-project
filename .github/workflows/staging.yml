@@ -28,7 +28,7 @@ jobs:
             echo "logged into server"
             cd week-25-ci-necct-app
             echo "cd done"
-            sudo apt install -y npm
+            echo "$npm -v"
             npm install -g pnpm
             echo "pnpm istall done"
             pnpm run build
