@@ -28,11 +28,8 @@ jobs:
             echo "logged into server"
             cd deploying-monorepo-project
             echo "cd done"
-            echo "$npm -v"
-            npm install -g pnpm
             echo "pnpm istall done"
             pnpm run build
-            npm install -g pm2
             pm2 restart http-server
             pm2 restart ws-server
             pm2 restart fe-server
