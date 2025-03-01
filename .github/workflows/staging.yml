@@ -30,5 +30,6 @@ jobs:
             ls -ltr
             sudo npm i -g pnpm
             pnpm install
+            git pull origin staging
             
  
