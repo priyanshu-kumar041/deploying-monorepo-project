@@ -28,6 +28,7 @@ jobs:
             echo "logged into server"
             cd deploying-monorepo-project
             ls -ltr
+            sudo npm i -g pnpm
             pnpm install
             
  
