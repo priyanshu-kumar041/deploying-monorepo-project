@@ -28,7 +28,7 @@ jobs:
             echo "logged into server"
             cd week-25-ci-necct-app
             echo "cd done"
-            PATH=/root/.nvm/versions/node/v22.13.1/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+            export PATH=/root/.nvm/versions/node/v22.13.1/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
             npm install -g pnpm
             echo "pnpm istall done"
             pnpm run build
