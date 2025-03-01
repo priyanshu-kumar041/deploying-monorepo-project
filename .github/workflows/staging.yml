@@ -1,0 +1,35 @@
+name : Deploy a monorepo to EC2 Server
+
+on:
+    push:
+        branches:
+            - staging
+
+
+
+
+jobs:
+  deploy:
+    name: deploying on ec2
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v2
+
+      - name: executing remote ssh commands using pub-pvt key pair
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: 3.108.40.31
+          username: ubuntu
+          key: ${{secrets.PRIVATE_SSH_KEY_STAGING}}
+          port: 22
+          script : |
+            echo "logged into server"
+            cd week-25-ci-necct-app
+            pnpm install
+            pnpm run build
+            pm2 restart http-server
+            pm2 restart ws-server
+            pm2 restart fe-server
+ 
