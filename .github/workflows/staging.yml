@@ -27,10 +27,7 @@ jobs:
           script : |
             echo "logged into server"
             cd deploying-monorepo-project
+            ls -ltr
             echo "cd done"
-            echo "pnpm istall done"
-            pnpm run build
-            pm2 restart http-server
-            pm2 restart ws-server
-            pm2 restart fe-server
+            
  
