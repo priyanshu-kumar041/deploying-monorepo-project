@@ -27,7 +27,9 @@ jobs:
           script : |
             echo "logged into server"
             cd week-25-ci-necct-app
+            echo "cd done"
             pnpm install
+            echo "pnpm istall done"
             pnpm run build
             pm2 restart http-server
             pm2 restart ws-server
