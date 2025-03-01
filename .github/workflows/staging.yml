@@ -29,6 +29,7 @@ jobs:
             cd deploying-monorepo-project
             ls -ltr
             sudo npm i -g pnpm
+            sudo npm i -g pm2
             pnpm install
             git pull origin staging
             pnpm run build
