@@ -31,5 +31,6 @@ jobs:
             sudo npm i -g pnpm
             pnpm install
             git pull origin staging
+            pnpm run build
             
  
