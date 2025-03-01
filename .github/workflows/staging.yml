@@ -26,7 +26,7 @@ jobs:
           port: 22
           script : |
             echo "logged into server"
-            cd week-25-ci-necct-app
+            cd deploying-monorepo-project
             echo "cd done"
             echo "$npm -v"
             npm install -g pnpm
