@@ -28,8 +28,6 @@ jobs:
             echo "logged into server"
             cd deploying-monorepo-project
             ls -ltr
-            echo "cd done"
             pnpm install
-            echo "pnpm install done"
             
  
