@@ -34,5 +34,5 @@ jobs:
             git pull origin staging
             pnpm run build
             pm2 restart http-server
-            
+            pm2 restart ws-server
  
